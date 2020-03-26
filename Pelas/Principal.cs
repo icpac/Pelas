@@ -1,4 +1,7 @@
 ﻿/************************************
+ * javier1604@gmail.com
+ * Carlos Javier López Cruz
+ * Utilerias en General
  * **********************************/
 using System;
 using System.Collections.Generic;
@@ -22,6 +25,13 @@ namespace Pelas
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AcercaDe frm = new AcercaDe();
+
+            frm.ShowDialog();
         }
     }
 }
