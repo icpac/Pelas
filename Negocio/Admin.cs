@@ -51,7 +51,7 @@ namespace Negocio
                         {
                             ListaClies.Add(new Cliente
                             {
-                                Clave = reader.GetString(0),
+                                Clave = reader.GetString(0)
                             });
                         }
                     }
