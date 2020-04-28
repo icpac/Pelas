@@ -1,4 +1,10 @@
-﻿using apl.Gui;
+﻿/*
+ * Carlos Javier López Cruz
+ * 
+ * Correo:	javier1604@gmail.com
+ */
+
+using apl.Gui;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

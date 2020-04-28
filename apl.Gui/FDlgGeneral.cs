@@ -1,7 +1,7 @@
 /*
  * Carlos Javier López Cruz
  * 
- * Correo:		javier1604@gmail.com
+ * Correo:	javier1604@gmail.com
  */
 
 using System;
