@@ -1,15 +1,16 @@
-#region Copyright (c) 2000-2012 cjlc
+#region TIT
 /*
 {+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++)
 {                                                                   }
-{     cjlc Cap control administrativo personal                      }
-{                                                                   }
-{     Copyrigth (c) 2000-2012 cjlc                                  }
-{     Todos los derechos reservados                                 }
+{     Tlacaelel Icpac                                               }
+{     tlacaelel.icpac@gmail.com                                     }
 {                                                                   }
 {*******************************************************************}
  */
 #endregion
+/* Se cambie el curso a Espera y cuando se termina regresa al cursor 
+ * anterior
+ */
 
 using System;
 using System.Windows.Forms;

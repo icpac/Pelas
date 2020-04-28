@@ -1,4 +1,16 @@
-﻿using System;
+﻿#region TIT
+/*
+{+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++)
+{                                                                   }
+{     Tlacaelel Icpac                                               }
+{     tlacaelel.icpac@gmail.com                                     }
+{                                                                   }
+{*******************************************************************}
+ */
+#endregion
+/* Negocio AES
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

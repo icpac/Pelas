@@ -1,8 +1,15 @@
-﻿/************************************
- * javier1604@gmail.com
- * Carlos Javier López Cruz
- * Utilerias en General
- * **********************************/
+﻿#region TIT
+/*
+{+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++)
+{                                                                   }
+{     Tlacaelel Icpac                                               }
+{     tlacaelel.icpac@gmail.com                                     }
+{                                                                   }
+{*******************************************************************}
+ */
+#endregion
+/* Utilerias en General
+ */
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

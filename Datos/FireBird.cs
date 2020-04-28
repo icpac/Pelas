@@ -1,12 +1,17 @@
-﻿/*
- * javier1604@gmail.com
- * Carlos Javier Lopez Cruz
- *
- * User: Tlacaelel
- * Date: 06/06/2018
- * Time: 03:04 p. m.
- * 
+﻿#region TIT
+/*
+{+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++)
+{                                                                   }
+{     Tlacaelel Icpac                                               }
+{     tlacaelel.icpac@gmail.com                                     }
+{                                                                   }
+{*******************************************************************}
  */
+#endregion
+ /*Para leer los datos en Firebird
+  * 
+  */
+
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -62,10 +67,10 @@ namespace Datos
                 {
                     mCadenaConn = new FbConnectionStringBuilder();
 		           	(mCadenaConn as FbConnectionStringBuilder).ServerType = FbServerType.Default;
-            		(mCadenaConn as FbConnectionStringBuilder).UserID = "sysdba";
-            		(mCadenaConn as FbConnectionStringBuilder).Password = "masterkey";
-            		(mCadenaConn as FbConnectionStringBuilder).Dialect = 3;
-            		(mCadenaConn as FbConnectionStringBuilder).Pooling = false;
+            		(mCadenaConn as FbConnectionStringBuilder).UserID = Usuario;
+            		(mCadenaConn as FbConnectionStringBuilder).Password = Contraseña;
+            		(mCadenaConn as FbConnectionStringBuilder).Dialect = Dialecto;
+            		(mCadenaConn as FbConnectionStringBuilder).Pooling = Agrupacion;
                 }
                 return mCadenaConn;
             }
@@ -81,5 +86,17 @@ namespace Datos
         {
             return (Coneccion as FbConnection).GetSchema("Tables", new string[] { null, null, null, "TABLE" });
         }
+
+        private string Usuario
+        { get { return "sysdba"; } }
+
+        private string Contraseña
+        { get { return "masterkey"; } }
+
+        private int Dialecto
+        { get { return 3; } }
+
+        private bool Agrupacion
+        { get { return false; } }
     }
 }

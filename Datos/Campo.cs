@@ -1,4 +1,17 @@
-﻿using System;
+﻿#region TIT
+/*
+{+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++)
+{                                                                   }
+{     Tlacaelel Icpac                                               }
+{     tlacaelel.icpac@gmail.com                                     }
+{                                                                   }
+{*******************************************************************}
+ */
+#endregion
+
+ /* Para leer una tabla relacional
+  */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

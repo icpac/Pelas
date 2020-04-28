@@ -1,8 +1,13 @@
-﻿/*
- * Carlos Javier López Cruz
- * 
- * Correo:	javier1604@gmail.com
+﻿#region TIT
+/*
+{+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++)
+{                                                                   }
+{     Tlacaelel Icpac                                               }
+{     tlacaelel.icpac@gmail.com                                     }
+{                                                                   }
+{*******************************************************************}
  */
+#endregion
 
 using apl.Gui;
 using System;

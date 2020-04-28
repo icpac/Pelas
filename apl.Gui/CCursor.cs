@@ -1,11 +1,9 @@
-#region Copyright (c) 2000-2013 cjlc
+#region TIT
 /*
 {+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++)
 {                                                                   }
-{     cjlc Cap control administrativo personal                      }
-{                                                                   }
-{     Copyrigth (c) 2000-2013 cjlc                                  }
-{     Todos los derechos reservados                                 }
+{     Tlacaelel Icpac                                               }
+{     tlacaelel.icpac@gmail.com                                     }
 {                                                                   }
 {*******************************************************************}
  */
