@@ -1,20 +1,19 @@
-﻿#region Using directives
-
-using System;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-#endregion
+// Information about this assembly is defined by the following
+// attributes.
+//
+// change them to the information which is associated with the assembly
+// you compile.
 
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-[assembly: AssemblyTitle("Datos")]
+[assembly: AssemblyTitle("INIFileSharp")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Datos")]
-[assembly: AssemblyCopyright("Copyright 2018")]
+[assembly: AssemblyProduct("INIFileSharp")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -26,6 +25,7 @@ using System.Runtime.InteropServices;
 //
 // Major.Minor.Build.Revision
 //
-// You can specify all the values or you can use the default the Revision and 
-// Build Numbers by using the '*' as shown below:
+// You can specify all values by your own or you can build default build and revision
+// numbers with the '*' character (the default):
+
 [assembly: AssemblyVersion("1.0.*")]

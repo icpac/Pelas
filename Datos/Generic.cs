@@ -1,16 +1,12 @@
-﻿#region TIT
-/*
-{+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++)
-{                                                                   }
-{     Tlacaelel Icpac                                               }
-{     tlacaelel.icpac@gmail.com                                     }
-{                                                                   }
-{*******************************************************************}
+﻿/*
+ * javier1604@gmail.com
+ * Carlos Javier Lopez Cruz
+ *
+ * User: Tlacaelel
+ * Date: 22/02/2018
+ * Time: 10:10 a.m.
+ * 
  */
-#endregion
- /*Plantilla para cualquier manejador de Base de Datos relacional
-  */
-
 using System;
 using System.Collections.Generic;
 using System.Data;
