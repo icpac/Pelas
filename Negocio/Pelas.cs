@@ -42,17 +42,17 @@ namespace Negocio
                 $" fc.cve_vend," +
 
                 $" (Select sum(cd.importe * cd.signo)" +
-                $" from {CuentasNombre} as cd" +
+                $" from {DetalleCuentasNombre} as cd" +
                 $" where cd.refer = cm.refer" +
                 $" and cd.cve_clie = cm.cve_clie" +
-                $" and cd.num_cargo = cm.num_cargo) as pagos,"+
-                
+                $" and cd.num_cargo = cm.num_cargo) as pagos," +
+
                 $" round((Select sum(cd.importe * cd.signo)" +
                 $" from {DetalleCuentasNombre} as cd" +
-                $" where cd.refer = cm.refer"+
-                $" and cd.cve_clie = cm.cve_clie"+
-                $" and cd.num_cargo = cm.num_cargo), 2) +"+
-                $" round(cm.importe * cm.signo, 2) as saldo"+
+                $" where cd.refer = cm.refer" +
+                $" and cd.cve_clie = cm.cve_clie" +
+                $" and cd.num_cargo = cm.num_cargo), 2) +" +
+                $" round(cm.importe * cm.signo, 2) as saldo" +
 
 
                 $" FROM {CuentasNombre} cm" +
@@ -64,7 +64,11 @@ namespace Negocio
 
                 $" where" +
                 $" cm.fecha_apli <= '04/30/2020' and cm.num_cpto <> 9" +
-                $" and(cd.NUM_CPTO in (5, 10, 11, 17, 22, 23, 46, 47, 48))";
+                $" and(cd.NUM_CPTO in (5, 10, 11, 17, 22, 23, 46, 47, 48))" +
+                $" GROUP BY "+
+                $" fc.cve_vend, cm.cve_clie, cm.refer, cm.num_cargo,"+
+                $" cm.importe, cm.signo, cm.FECHA_APLI, cm.FECHA_VENC," +
+                $" cd.refer, cd.num_cargo, cd.importe, cd.signo, cd.FECHA_APLI";
 
             FbDataReader reader = datos.LeeDatosOnly(sql) as FbDataReader;
             List<AntiguosSaldos> Lista = new List<AntiguosSaldos>();
