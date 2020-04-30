@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "apl.Log", "apl.Log\apl.Log.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INIFile", "INIFile\INIFile.csproj", "{413AEB73-CBED-41E5-A979-02E2191162A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlsGui", "PlsGui\PlsGui.csproj", "{7CD1C973-E95B-41B7-834D-9A097B3DA3A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +60,12 @@ Global
 		{413AEB73-CBED-41E5-A979-02E2191162A9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{413AEB73-CBED-41E5-A979-02E2191162A9}.XXPO|Any CPU.ActiveCfg = XXPO|Any CPU
 		{413AEB73-CBED-41E5-A979-02E2191162A9}.XXPO|Any CPU.Build.0 = XXPO|Any CPU
+		{7CD1C973-E95B-41B7-834D-9A097B3DA3A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CD1C973-E95B-41B7-834D-9A097B3DA3A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CD1C973-E95B-41B7-834D-9A097B3DA3A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CD1C973-E95B-41B7-834D-9A097B3DA3A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CD1C973-E95B-41B7-834D-9A097B3DA3A6}.XXPO|Any CPU.ActiveCfg = Release|Any CPU
+		{7CD1C973-E95B-41B7-834D-9A097B3DA3A6}.XXPO|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
