@@ -26,7 +26,7 @@ namespace Negocio
     {
         private static int NmrEmprs;
 
-        public static List<Cliente> Productos(string ruta, int nmEm)
+        public static List<Cliente> Clientes(string ruta, int nmEm)
         {
             if (string.IsNullOrEmpty(ruta))
             {
@@ -39,7 +39,7 @@ namespace Negocio
                 FireBird datos = new FireBird();
                 (datos.CadenaConn as FbConnectionStringBuilder).Database = ruta;
 
-                string sql = string.Format("select * From {0} order by cve_art asc", ClienteNombre);
+                string sql = string.Format("select * From {0} order by clave asc", ClienteNombre);
                 FbDataReader reader = datos.LeeDatosOnly(sql) as FbDataReader;
                 List<Cliente> ListaClies = new List<Cliente>();
 

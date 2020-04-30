@@ -45,17 +45,50 @@
   <ItemGroup>
     <Compile Include="CCursor.cs" />
     <Compile Include="CWaitCursor.cs" />
+    <Compile Include="FConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FConsulta.Designer.cs">
+      <DependentUpon>FConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FDialog.Designer.cs">
+      <DependentUpon>FDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="FDlgGeneral.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FDlgGeneral.Designer.cs">
       <DependentUpon>FDlgGeneral.cs</DependentUpon>
     </Compile>
+    <Compile Include="FFiltroQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FFiltroQ.Designer.cs">
+      <DependentUpon>FFiltroQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FOkCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FOkCancel.Designer.cs">
+      <DependentUpon>FOkCancel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FConsulta.resx">
+      <DependentUpon>FConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDialog.resx">
+      <DependentUpon>FDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FDlgGeneral.resx">
       <DependentUpon>FDlgGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FOkCancel.resx">
+      <DependentUpon>FOkCancel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

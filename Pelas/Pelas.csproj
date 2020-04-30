@@ -52,6 +52,12 @@
     <Compile Include="AcercaDe.Designer.cs">
       <DependentUpon>AcercaDe.cs</DependentUpon>
     </Compile>
+    <Compile Include="FClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FClientes.Designer.cs">
+      <DependentUpon>FClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,10 @@
     <ProjectReference Include="..\apl.Gui\apl.Gui.csproj">
       <Project>{e0569527-a931-4ac1-b89b-2ffd803b0761}</Project>
       <Name>apl.Gui</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{B9FF6216-02CC-41CE-A129-AD03AC46816B}</Project>
+      <Name>Negocio</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

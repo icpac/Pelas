@@ -19,5 +19,6 @@ namespace Negocio.EAS
     public class Cliente
     {
         public string Clave { get; set; }
+        public string Nombre { get; set; }
     }
 }
