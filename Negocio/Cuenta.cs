@@ -1,14 +1,11 @@
-﻿/*
- * javier1604@gmail.com
- * Carlos Javier Lopez Cruz
- *
- * User: Tlacaelel
- * Date: 18 /jun /2018
- * Time: 08:54 a. m.
- * 
+﻿#region TIT
+/*
+ * tlacaelel.icpac@gmail.com
+ * Tlacaelel Icpac
  */
+#endregion
 
- using PlsProGui;
+using PlsProGui;
 using System;
 using System.Collections.Generic;
 using System.Linq;

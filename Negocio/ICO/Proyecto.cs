@@ -1,12 +1,9 @@
-﻿/*
- * javier1604@gmail.com
- * Carlos Javier Lopez Cruz
- *
- * User: Tlacaelel
- * Date: 08/08/2018
- * Time: 05:04 a. m.
- * 
+﻿#region TIT
+/*
+ * tlacaelel.icpac@gmail.com
+ * Tlacaelel Icpac
  */
+#endregion
 
 using System;
 using System.Collections.Generic;
@@ -14,9 +11,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Negocio.COI
+namespace Negocio.ICO
 {
-    public class CentroCosto
+    public class Proyecto
     {
         public int Id { get; set; }
         public string Descripcion { get; set; }

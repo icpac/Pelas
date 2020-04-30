@@ -1,29 +1,25 @@
-﻿/*
- * javier1604@gmail.com
- * Carlos Javier Lopez Cruz
- *
- * User: Tlacaelel
- * Date: 20/06/2018
- * Time: 08:33 a. m.
- * 
+﻿#region TIT
+/*
+ * tlacaelel.icpac@gmail.com
+ * Tlacaelel Icpac
  */
+#endregion
 
 using apl.Log;
 using Datos;
 using FirebirdSql.Data.FirebirdClient;
-using Negocio.COI;
+using Negocio.ICO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.IO;
 using System.Linq;
-using Negocio.EAS;
 using Negocio.AES;
 
 namespace Negocio
 {
-    public static class Aspel
+    public static class Pelas
     {
         public static List<AntiguosSaldos> VendedoresSaldos(string ruta, int nmEmpr)
         {

@@ -1,4 +1,11 @@
-﻿using System;
+﻿#region TIT
+/*
+ * tlacaelel.icpac@gmail.com
+ * Tlacaelel Icpac
+ */
+#endregion
+
+using System;
 
 namespace Negocio
 {

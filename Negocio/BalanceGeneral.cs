@@ -1,4 +1,11 @@
-﻿using PlsProGui;
+﻿#region TIT
+/*
+ * tlacaelel.icpac@gmail.com
+ * Tlacaelel Icpac
+ */
+#endregion
+
+using PlsProGui;
 using System;
 using System.Collections.Generic;
 using System.Linq;

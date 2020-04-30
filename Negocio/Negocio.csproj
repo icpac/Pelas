@@ -56,10 +56,10 @@
     <Compile Include="AES\Cxc.cs" />
     <Compile Include="AES\MovimientosCxc.cs" />
     <Compile Include="AES\Vendedor.cs" />
-    <Compile Include="Aspel.cs" />
+    <Compile Include="Pelas.cs" />
     <Compile Include="Auxiliar.cs" />
-    <Compile Include="COI\CentroCosto.cs" />
-    <Compile Include="COI\Proyecto.cs" />
+    <Compile Include="ICO\CentroCosto.cs" />
+    <Compile Include="ICO\Proyecto.cs" />
     <Compile Include="DisplayFormatAttribute.cs" />
     <Compile Include="ParametrosCOI.cs" />
     <Compile Include="PolizaItem.cs" />

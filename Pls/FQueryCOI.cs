@@ -50,10 +50,10 @@ namespace Pls
                 switch (tp)
                 {
                     case EQueryCOI.Cuentas:
-                        dataGridViewCnst.DataSource = Aspel.CuentasCOI(stgs.RutaCOI, null);
+                        dataGridViewCnst.DataSource = Pelas.CuentasCOI(stgs.RutaCOI, null);
                         break;
                     case EQueryCOI.Polizas:
-                        dataGridViewCnst.DataSource = Aspel.Polizas(stgs.RutaCOI);
+                        dataGridViewCnst.DataSource = Pelas.Polizas(stgs.RutaCOI);
                         break;
                 }
                 FormatCells();

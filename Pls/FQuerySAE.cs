@@ -52,13 +52,13 @@ namespace Pls
                 switch (tp)
                 {
                     case EQuerySAE.Productos:
-                        dataGridViewCnst.DataSource = Aspel.Productos(stgs.RutaSAE, stgs.NmrEmpresa/*.ToString()*/);
+                        dataGridViewCnst.DataSource = Pelas.Productos(stgs.RutaSAE, stgs.NmrEmpresa/*.ToString()*/);
                         break;
                     case EQuerySAE.Ventas:
-                        dataGridViewCnst.DataSource = Aspel.Ventas(stgs.RutaSAE, stgs.NmrEmpresa/*.ToString()*/);
+                        dataGridViewCnst.DataSource = Pelas.Ventas(stgs.RutaSAE, stgs.NmrEmpresa/*.ToString()*/);
                         break;
                     case EQuerySAE.VendedoresSaldos:
-                        dataGridViewCnst.DataSource = Aspel.VendedoresSaldos(stgs.RutaSAE, stgs.NmrEmpresa);
+                        dataGridViewCnst.DataSource = Pelas.VendedoresSaldos(stgs.RutaSAE, stgs.NmrEmpresa);
                         break;
                 }
                 FormatCells();

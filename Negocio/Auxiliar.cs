@@ -1,14 +1,11 @@
-﻿/*
- * javier1604@gmail.com
- * Carlos Javier Lopez Cruz
- *
- * User: Tlacaelel
- * Date: 26 / 07/ 2018
- * Time: 12:09 p. m.
- * 
+﻿#region TIT
+/*
+ * tlacaelel.icpac@gmail.com
+ * Tlacaelel Icpac
  */
+#endregion
 
-using Negocio.COI;
+using Negocio.ICO;
 using PlsProGui;
 using System;
 using System.Collections.Generic;

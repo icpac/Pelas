@@ -1,21 +1,18 @@
 ﻿#region TIT
 /*
-{+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++)
-{                                                                   }
-{     Tlacaelel Icpac                                               }
-{     tlacaelel.icpac@gmail.com                                     }
-{                                                                   }
-{*******************************************************************}
+ * tlacaelel.icpac@gmail.com
+ * Tlacaelel Icpac
  */
 #endregion
- /*Tabla de Vendedores
-  * 
-  */
+
+/*Tabla de Vendedores
+ * 
+ */
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Negocio.EAS
+namespace Negocio.AES
 {
     public class Vendedor
     {
