@@ -36,39 +36,58 @@ namespace Negocio
 
             string sql;
 
-            sql = $" SELECT cm.cve_clie, cm.refer, cm.importe * cm.signo as impfac," +
-                $" cm.fecha_apli, cm.fecha_venc, cd.fecha_apli as dtfecha_apli," +
-
+            sql =
+                $" select max(m.importe) - sum(d.importe) as total," +
+                $" m.cve_clie, m.refer, d.refer," +
                 $" fc.cve_vend," +
+                $" m.importe * m.signo as impfac," +
+                $" m.fecha_apli, m.fecha_venc, d.fecha_apli as dtfecha_apli" +
 
-                $" (Select sum(cd.importe * cd.signo)" +
-                $" from {DetalleCuentasNombre} as cd" +
-                $" where cd.refer = cm.refer" +
-                $" and cd.cve_clie = cm.cve_clie" +
-                $" and cd.num_cargo = cm.num_cargo) as pagos," +
+                $" from {CuentasNombre} as m" +
+                $" left join  {FacturaNombre} as fc on fc.cve_doc = m.refer" +
+                $"       and fc.CVE_CLPV = m.CVE_CLIE" +
 
-                $" round((Select sum(cd.importe * cd.signo)" +
-                $" from {DetalleCuentasNombre} as cd" +
-                $" where cd.refer = cm.refer" +
-                $" and cd.cve_clie = cm.cve_clie" +
-                $" and cd.num_cargo = cm.num_cargo), 2) +" +
-                $" round(cm.importe * cm.signo, 2) as saldo" +
+                $" inner join {DetalleCuentasNombre} as d" +
+                $"    on m.refer = d.refer" +
+
+                $" where m.num_cpto <> 9 and " +
+                $" d.num_cpto in (5, 10, 11, 17, 22, 23, 46, 47, 48)" +
+                $" group by m.refer, d.refer, m.cve_clie," +
+                $" impfac, m.fecha_apli, m.fecha_venc," +
+                $" dtfecha_apli, fc.cve_vend";
+            /*$" SELECT cm.cve_clie, cm.refer, cm.importe * cm.signo as impfac," +
+            $" cm.fecha_apli, cm.fecha_venc, cd.fecha_apli as dtfecha_apli," +
+
+            $" fc.cve_vend," +
+
+            $" (Select sum(cd.importe * cd.signo)" +
+            $" from {DetalleCuentasNombre} as cd" +
+            $" where cd.refer = cm.refer" +
+            $" and cd.cve_clie = cm.cve_clie" +
+            $" and cd.num_cargo = cm.num_cargo) as pagos," +
+
+            $" round((Select sum(cd.importe * cd.signo)" +
+            $" from {DetalleCuentasNombre} as cd" +
+            $" where cd.refer = cm.refer" +
+            $" and cd.cve_clie = cm.cve_clie" +
+            $" and cd.num_cargo = cm.num_cargo), 2) +" +
+            $" round(cm.importe * cm.signo, 2) as saldo" +
 
 
-                $" FROM {CuentasNombre} cm" +
-                $" LEFT JOIN {DetalleCuentasNombre} as cd on cm.refer = cd.refer" +
-                $" and cd.cve_clie = cm.cve_clie" +
-                $" and cd.num_cargo = cm.num_cargo" +
-                $" LEFT JOIN  {FacturaNombre} as fc on fc.cve_doc = cm.refer" +
-                $" and fc.CVE_CLPV = cm.CVE_CLIE" +
+            $" FROM {CuentasNombre} cm" +
+            $" LEFT JOIN {DetalleCuentasNombre} as cd on cm.refer = cd.refer" +
+            $" and cd.cve_clie = cm.cve_clie" +
+            $" and cd.num_cargo = cm.num_cargo" +
+            $" LEFT JOIN  {FacturaNombre} as fc on fc.cve_doc = cm.refer" +
+            $" and fc.CVE_CLPV = cm.CVE_CLIE" +
 
-                $" where" +
-                $" cm.fecha_apli <= '04/30/2020' and cm.num_cpto <> 9" +
-                $" and(cd.NUM_CPTO in (5, 10, 11, 17, 22, 23, 46, 47, 48))" +
-                $" GROUP BY "+
-                $" fc.cve_vend, cm.cve_clie, cm.refer, cm.num_cargo,"+
-                $" cm.importe, cm.signo, cm.FECHA_APLI, cm.FECHA_VENC," +
-                $" cd.refer, cd.num_cargo, cd.importe, cd.signo, cd.FECHA_APLI";
+            $" where" +
+            $" cm.fecha_apli <= '04/30/2020' and cm.num_cpto <> 9" +
+            $" and(cd.NUM_CPTO in (5, 10, 11, 17, 22, 23, 46, 47, 48))" +
+            $" GROUP BY "+
+            $" fc.cve_vend, cm.cve_clie, cm.refer, cm.num_cargo,"+
+            $" cm.importe, cm.signo, cm.FECHA_APLI, cm.FECHA_VENC," +
+            $" cd.refer, cd.num_cargo, cd.importe, cd.signo, cd.FECHA_APLI";*/
 
             FbDataReader reader = datos.LeeDatosOnly(sql) as FbDataReader;
             List<AntiguosSaldos> Lista = new List<AntiguosSaldos>();
@@ -79,24 +98,61 @@ namespace Negocio
                 {
                     while (reader.Read())
                     {
-                        if (reader.GetDouble(8) != 0)
+                        if (reader.GetDouble(0) != 0)
                         {
                             Lista.Add(new AntiguosSaldos
                             {
-                                Cliente = reader.GetString(0),
-                                Referencia = reader.GetString(1),
-                                ImporteFactura = reader.GetDouble(2),
-                                FechaAplicacion = reader.GetDateTime(3),
-                                FechaVencimiento = reader.GetDateTime(4),
-                                Vendedor = reader.GetString(6),
-                                Pagos = reader.GetDouble(7),
-                                Saldo = reader.GetDouble(8),
+                                Cliente = reader.GetString(1),
+                                Referencia = reader.GetString(2),
+                                ImporteFactura = reader.GetDouble(5),
+                                FechaAplicacion = reader.GetDateTime(6),
+                                FechaVencimiento = reader.GetDateTime(7),
+                                Vendedor = reader.GetString(4),
+                                /*Pagos = reader.GetDouble(7),*/
+                                Saldo = reader.GetDouble(0),
                             });
                         }
                     }
                 }
                 reader.Close();
             }
+
+            sql = $" select m.cve_clie, m.refer," +
+                $" m.importe* m.signo as impfac," +
+                $" m.fecha_apli, m.fecha_venc," +
+                $" fc.cve_vend" +
+                $" from {CuentasNombre} as m" +
+                $" left join {DetalleCuentasNombre} as d" +
+                $" on d.refer = m.refer" +
+                $" LEFT JOIN  {FacturaNombre} as fc on fc.cve_doc = m.refer" +
+                $" and fc.CVE_CLPV = m.CVE_CLIE" +
+                $" where d.refer is null";
+
+            FbDataReader readerv = datos.LeeDatosOnly(sql) as FbDataReader;
+            using (new CWaitCursor())
+            {
+                if (readerv.HasRows)
+                {
+                    while (readerv.Read())
+                    {
+                        if (readerv.GetDouble(2) != 0)
+                        {
+                            Lista.Add(new AntiguosSaldos
+                            {
+                                Cliente = readerv.GetString(0),
+                                Referencia = readerv.GetString(1),
+                                ImporteFactura = readerv.GetDouble(2),
+                                FechaAplicacion = readerv.GetDateTime(3),
+                                FechaVencimiento = readerv.GetDateTime(4),
+                                Vendedor = readerv.GetString(5),
+                                Saldo = readerv.GetDouble(2),
+                            }) ;
+                        }
+                    }
+                }
+                readerv.Close();
+            }
+            Lista.Sort(new AntiguosSaldosComparer());
             return Lista;
         }
 

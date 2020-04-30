@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Negocio.AES
 {
-    public class AntiguosSaldos
+    public class AntiguosSaldos 
     {
         // public Cliente Cliente { get; set; }
         public string Cliente { get; set; }
@@ -25,5 +25,13 @@ namespace Negocio.AES
         public string Vendedor { get; set; }
         public double Pagos { get; set; }
         public double Saldo { get; set; }
+    }
+
+    public class AntiguosSaldosComparer : IComparer<AntiguosSaldos>
+    {
+        public int Compare(AntiguosSaldos x, AntiguosSaldos y)
+        {
+            return x.Vendedor.CompareTo(y.Vendedor);
+        }
     }
 }
