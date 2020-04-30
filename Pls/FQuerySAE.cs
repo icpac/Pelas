@@ -1,12 +1,9 @@
-﻿/*
- * javier1604@gmail.com
- * Carlos Javier Lopez Cruz
- *
- * User: Tlacaelel
- * Date: 20/06/2018
- * Time: 08:32 a. m.
- * 
+﻿#region TIT
+/*
+ * tlacaelel.icpac@gmail.com
+ * Tlacaelel Icpac
  */
+#endregion
 
 using Datos;
 using FirebirdSql.Data.FirebirdClient;
