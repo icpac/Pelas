@@ -1,11 +1,14 @@
-﻿#region TIT
-/*
- * tlacaelel.icpac@gmail.com
- * Tlacaelel Icpac
+﻿/*
+ * javier1604@gmail.com
+ * Carlos Javier Lopez Cruz
+ *
+ * User: Tlacaelel
+ * Date: 25/06/2018
+ * Time: 09:21 a. m.
+ * 
  */
-#endregion
 
-using iCap;
+using PlsGui;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,13 +16,14 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PlsGui
+namespace Pls
 {
-    public partial class FOkCancel : FDialog
+    public partial class FFiltroSae : FFiltroQ
     {
-        public FOkCancel()
+        public FFiltroSae()
         {
             InitializeComponent();
         }

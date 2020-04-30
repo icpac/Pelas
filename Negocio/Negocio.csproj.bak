@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B9FF6216-02CC-41CE-A129-AD03AC46816B}</ProjectGuid>
+    <ProjectGuid>{AECB66B0-B6A4-4410-82F9-771AFCF1FDCA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Negocio</RootNamespace>
@@ -31,11 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Docs.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Office.v19.2.Core, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Charts.v19.2.Core, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Spreadsheet.v19.2.Core, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Xpo.v19.2, Version=19.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Docs.v19.1, Version=19.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v19.1.Core, Version=19.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Charts.v19.1.Core, Version=19.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Spreadsheet.v19.1.Core, Version=19.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v19.1, Version=19.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="FirebirdSql.Data.FirebirdClient">
@@ -51,11 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AES\AntiguosSaldos.cs" />
-    <Compile Include="AES\Cliente.cs" />
-    <Compile Include="AES\Cxc.cs" />
-    <Compile Include="AES\MovimientosCxc.cs" />
-    <Compile Include="AES\Vendedor.cs" />
     <Compile Include="Aspel.cs" />
     <Compile Include="Auxiliar.cs" />
     <Compile Include="COI\CentroCosto.cs" />
@@ -78,15 +73,14 @@
     <Compile Include="XML.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\apl.Log\apl.Log.csproj">
+    <ProjectReference Include="..\..\..\Libs\apl.Log\apl.Log.csproj">
       <Project>{894890b8-98a6-4a3b-b70e-e07f514881cc}</Project>
       <Name>apl.Log</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Datos\Datos.csproj">
-      <Project>{449421bf-7780-4589-b8c9-16db4836f99d}</Project>
+    <ProjectReference Include="..\..\Pls\Datos\Datos.csproj">
+      <Project>{2183d70a-3036-4a7a-a864-e04f2078259d}</Project>
       <Name>Datos</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

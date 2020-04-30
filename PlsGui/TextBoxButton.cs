@@ -1,12 +1,12 @@
-﻿/*
- * javier1604@gmail.com
- * Carlos Javier Lopez Cruz
+﻿#region TIT
+/*
+ * tlacaelel.icpac@gmail.com
+ * Tlacaelel Icpac
  *
- * User: Tlacaelel
- * Date: 07/06/2018
- * Time: 08:00 a. m.
  * https://stackoverflow.com/questions/15868817/button-inside-a-winforms-textbox
  */
+#endregion
+
 using System;
 using System.Windows.Forms;
 using System.Drawing;
