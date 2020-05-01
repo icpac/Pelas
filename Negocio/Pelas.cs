@@ -32,7 +32,7 @@ namespace Negocio
 
             FireBird datos = new FireBird();
             (datos.CadenaConn as FbConnectionStringBuilder).Database = ruta;
-            short concepto = 1;
+            //short concepto = 1;
 
             string sql;
 
