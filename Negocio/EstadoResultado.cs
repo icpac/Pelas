@@ -5,7 +5,6 @@
  */
 #endregion
 
-using DevExpress.Xpo;
 using Negocio.ICO;
 using PlsProGui;
 using System;
@@ -98,8 +97,6 @@ namespace Negocio
 
     public enum ETipoConceptoER
     {
-        // No jala
-        [DisplayName("1 Ingreso")]
         aIngreso,
         bCosto,
         cGastoGeneral,

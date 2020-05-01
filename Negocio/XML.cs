@@ -12,7 +12,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Xml;
-using DevExpress.Spreadsheet;
 
 namespace Negocio
 {
@@ -20,6 +19,7 @@ namespace Negocio
     {
         public void ExportExcel(string path)
         {
+            /*
             // Recorrer los archivos XML
             // Leer los datos
             // Crear el archivo Excel
@@ -46,7 +46,7 @@ namespace Negocio
             }
             string nameExport = $"XML_{DateTime.Today.ToString("dd-MMM-yyyy")}.xlsx";
             book.SaveDocument(nameExport);
-            book.Dispose();
+            book.Dispose();*/
         }
     }
 }
